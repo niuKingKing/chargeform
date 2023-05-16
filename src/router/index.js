@@ -1,26 +1,42 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    redirect:'/checkstatusquery'
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/checkstatusquery',
+    name: 'CheckStatus',
+    component: () => import('../views/CheckStatus.vue')
+  },
+  {
+    path: '/certificatesecurityquery',
+    name: 'certificatesecurity',
+    component: () => import('../views/CertificateSecurity.vue')
+  },
+  {
+    path: '/servicecapabilityquery',
+    name: 'servicecapability',
+    component: () => import('../views/ServiceCapability.vue')
+  },
+  {
+    path: '/chargingstandardsquery',
+    name: 'chargingstandards',
+    component: () => import('../views/ChargingStandards.vue')
+  },
+  {
+    path: '/pauseprojquery',
+    name: 'pauseprojquery',
+    component: () => import('../views/PauseProj.vue')
   }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 
