@@ -127,7 +127,6 @@ export default {
                         this.makeCode(this.identifyCodes, 4);
                         return;
                     }
-                    this.dialogVisible2 = true;
                     checkCertificate({
                         certificateNumber: this.form.certificatenumber,
                         certificateUnitName: this.form.certificateunit,
@@ -156,7 +155,6 @@ export default {
             this.makeCode(this.identifyCodes, 4);
         },
         handleSubmit() {
-            console.log("submit")
             this.$refs.form2.validate((valid) => {
                 if (!valid) {
                     return;

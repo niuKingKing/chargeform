@@ -76,7 +76,7 @@ export default {
                         sampleName: this.form.samplename,
                         verifyCode: this.form.code
                     }).then(res => {
-
+                        console.log(res)
                     }).catch(err => {
                         console.log(err)
                     })
